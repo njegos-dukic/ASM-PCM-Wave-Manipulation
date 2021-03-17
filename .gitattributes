@@ -1,0 +1,2 @@
+Illustration.jpg filter=lfs diff=lfs merge=lfs -text
+GCC[[:space:]]Optimizacije.pdf filter=lfs diff=lfs merge=lfs -text
