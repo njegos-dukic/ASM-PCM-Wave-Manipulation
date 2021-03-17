@@ -1,0 +1,5 @@
+- Place "W1.wav" and "W2.wav" in ./Input.
+- Place "Long-W1.wav" and "Long-W2.wav" in ./Optimizations.
+- Open terminal here.
+- Type "make".
+- Find output files in ./Output and benchmark results in the console.

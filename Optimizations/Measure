@@ -1,0 +1,35 @@
+#!/bin/bash
+
+printf "\nMeasuring performance with different optimization flags..\n"
+# printf "Copying larger W1 and W2 samples..\n"
+# cp ./Optimizations/W1.wav ./W1.wav
+# cp ./Optimizations/W2.wav ./W2.wav
+
+printf "Compiling with optimization flags..\n\n"
+gcc -w -o ./Optimizations/C-WaveManipulation ./Optimizations/C-WaveManipulation.c
+gcc -w -O1 -o ./Optimizations/C-WaveManipulationO1 ./Optimizations/C-WaveManipulation.c
+gcc -w -O2 -o ./Optimizations/C-WaveManipulationO2 ./Optimizations/C-WaveManipulation.c
+gcc -w -O3 -o ./Optimizations/C-WaveManipulationO3 ./Optimizations/C-WaveManipulation.c
+gcc -w -Ofast -o ./Optimizations/C-WaveManipulationOfast ./Optimizations/C-WaveManipulation.c
+gcc -w -Og -o ./Optimizations/C-WaveManipulationOg ./Optimizations/C-WaveManipulation.c
+
+printf "Regular "
+./Optimizations/C-WaveManipulation
+# time ./Optimizations/C-WaveManipulation
+printf "\nO1 "
+./Optimizations/C-WaveManipulationO1
+# time ./Optimizations/C-WaveManipulationO1
+printf "\nO2 "
+./Optimizations/C-WaveManipulationO2
+# time ./Optimizations/C-WaveManipulationO2
+printf "\nO3 "
+./Optimizations/C-WaveManipulationO3
+# time ./Optimizations/C-WaveManipulationO3
+printf "\nOfast "
+./Optimizations/C-WaveManipulationOfast
+# time ./Optimizations/C-WaveManipulationOfast
+printf "\nOg "
+./Optimizations/C-WaveManipulationOg
+# time ./Optimizations/C-WaveManipulationOg
+
+printf "\n\n"
